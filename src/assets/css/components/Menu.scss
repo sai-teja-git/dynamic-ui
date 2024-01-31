@@ -1,0 +1,33 @@
+.menus-list {
+    display: flex;
+    align-items: center;
+
+    .menu-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        cursor: pointer;
+        border: 1px solid #a1a1a1;
+        color: #a1a1a1;
+        padding: 10px;
+        transition: .3s ease all;
+
+        &:hover {
+            background: var(--primary-hover-color);
+            border: 1px solid var(--primary-hover-color);
+            transition: .3s ease all;
+        }
+
+        &.active {
+            background: var(--primary-active-color);
+            border: 1px solid var(--primary-active-color);
+            color: #dbdbdb;
+            transition: .3s ease all;
+        }
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+}

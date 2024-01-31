@@ -1,0 +1,21 @@
+// .app-body {
+//     background: var(--page-background);
+//     color: var(--color);
+// }
+
+.page {
+    padding: 16px;
+    height: 100vh;
+
+    &-head {
+        margin-bottom: 16px;
+    }
+}
+
+.page-not-found {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
