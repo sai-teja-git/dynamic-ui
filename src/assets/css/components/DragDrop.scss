@@ -1,0 +1,62 @@
+.fruits-list {
+    .title {
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    .fruits {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+.fruit-details {
+    border: 1px solid #bcbcbc;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: move;
+}
+
+.cart-session {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #bcbcbc;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    min-height: 8rem;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.field-list {
+    border: 1px solid var(--border-white-initial);
+    border-radius: 10px;
+
+    .field-to-select {
+        padding: 10px;
+        cursor: move;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--border-white-initial);
+        }
+    }
+}
+
+.field-dragging {
+    border: 1px solid var(--border-white-initial);
+    border-radius: 10px;
+    padding: 10px;
+    cursor: auto;
+}
+
+.form-set {
+    border: 1px solid var(--border-white-initial);
+    border-radius: 10px;
+    min-height: 8rem;
+}

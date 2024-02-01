@@ -19,6 +19,11 @@ export default function Menus() {
             path: "/pages/form-view",
             key: "form_view"
         },
+        {
+            name: "DND Test",
+            path: "/pages/dnd-test",
+            key: "dnd_test"
+        },
     ]
 
 
