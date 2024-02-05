@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './Global.scss'
+import "jquery/dist/jquery.js"
 import "bootstrap/dist/js/bootstrap.bundle.js"
 import "bootstrap/dist/css/bootstrap.css"
 import "@fortawesome/fontawesome-free/css/all.min.css"

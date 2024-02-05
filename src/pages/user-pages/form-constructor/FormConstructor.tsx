@@ -4,9 +4,7 @@ import { DndContext, DragEndEvent } from "@dnd-kit/core";
 import { SortableContext, verticalListSortingStrategy } from "@dnd-kit/sortable";
 import FieldDraggable from "./FieldDraggable";
 import FieldDropped from "./FieldDropped";
-
-
-
+import { v4 as uuidv4 } from "uuid";
 
 
 export default function FormConstructor() {
@@ -20,8 +18,9 @@ export default function FormConstructor() {
     const [selected_fields, setSelectedField] = useState<any[]>([])
 
     function addFieldToList(e: DragEndEvent) {
-        const newItem = e.active.data.current?.title;
-        if (e.over?.id !== "cart-droppable" || !newItem) return;
+        console.log("heree", e)
+        const newItem = e.active.data.current?.data;
+        if (e.over?.id !== "field-droppable" || !newItem) return;
         const temp = [...selected_fields];
         temp.push(newItem);
         setSelectedField(temp);
@@ -31,7 +30,12 @@ export default function FormConstructor() {
 
     function openModal() {
         console.log("clicked")
-        // $("#exampleModal").toggleC("show")
+        $("#exampleModal").modal("show")
+    }
+
+    function openCanvas() {
+        console.log("clicked")
+        $("#offcanvasExample").offcanvas("show")
     }
 
     return (
@@ -66,9 +70,9 @@ export default function FormConstructor() {
                 </ul>
             </div> */}
 
-            {/* <button type="button" className="btn btn-primary mt-3" onClick={openModal}>
+            <button type="button" className="btn btn-primary mt-3" onClick={openModal}>
                 Launch demo modal
-            </button> */}
+            </button>
 
             <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
@@ -84,6 +88,32 @@ export default function FormConstructor() {
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button type="button" className="btn btn-primary">Save changes</button>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* <button className="btn btn-primary" type="button" onClick={openCanvas}>
+                Button with data-bs-target
+            </button> */}
+
+            <div className="offcanvas offcanvas-start" tabIndex={-1} id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div className="offcanvas-header">
+                    <h5 className="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div className="offcanvas-body">
+                    <div>
+                        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                    </div>
+                    <div className="dropdown mt-3">
+                        <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Dropdown button
+                        </button>
+                        <ul className="dropdown-menu">
+                            <li><a className="dropdown-item" href="#">Action</a></li>
+                            <li><a className="dropdown-item" href="#">Another action</a></li>
+                            <li><a className="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>

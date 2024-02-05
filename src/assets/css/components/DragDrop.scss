@@ -41,10 +41,6 @@
     .field-to-select {
         padding: 10px;
         cursor: move;
-
-        &:not(:last-child) {
-            border-bottom: 1px solid var(--border-white-initial);
-        }
     }
 }
 
@@ -59,4 +55,16 @@
     border: 1px solid var(--border-white-initial);
     border-radius: 10px;
     min-height: 8rem;
+    width: 100%;
+
+    .field-selected {
+        border: 1px solid var(--border-white-initial);
+        margin: 10px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .form-field {
+        margin: 10px;
+    }
 }

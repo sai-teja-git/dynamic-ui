@@ -1,17 +1,17 @@
 import { Outlet } from 'react-router-dom'
 import Menus from '../../components/Menus'
+import Header from '../../components/Header'
 
 function UserPages() {
 
     return (
         <>
-            <div className="page">
-                <div className="page-head">
+            <Header />
+            {/* <div className="side-menu">
                     <Menus />
-                </div>
-                <div className="page-body">
-                    <Outlet />
-                </div>
+                </div> */}
+            <div className="page">
+                <Outlet />
             </div>
         </>
     )
