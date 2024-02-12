@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    height: 60px;
+    height: $header-height;
     border-bottom: 1px solid var(--header-border);
     padding: 0px 10px;
 
@@ -44,12 +44,107 @@
                 display: inline-block;
                 vertical-align: middle;
                 border-radius: 50%;
+                border: 1px solid var(--header-border);
 
                 img {
                     height: 100%;
                     width: 100%;
                     cursor: pointer;
                 }
+            }
+        }
+    }
+}
+
+.logout-option {
+    font-size: 15px;
+    transition: 0.3s ease all;
+    cursor: pointer;
+    color: var(--logout-init);
+
+    &:hover {
+        font-size: 17px;
+        transition: 0.3s ease all;
+        color: var(--logout-hover);
+    }
+}
+
+.profile-card {
+    display: flex;
+    justify-content: center;
+
+    .profile-data {
+        .profile-image {
+            $image-size: 8rem;
+            overflow: hidden;
+            height: $image-size;
+            width: $image-size;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 50%;
+            border: 1px solid var(--header-border);
+
+            img {
+                height: 100%;
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+
+        .profile-details {
+            text-align: center;
+            margin: 16px 0px;
+
+            .full-name {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.theme-action {
+    margin: 10px;
+    border: var(--border-mid-solid-one-px);
+    padding: 16px;
+    border-radius: 10px;
+
+    .title {
+        margin-bottom: 10px;
+    }
+
+    .theme-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .switch-theme {
+            border: var(--border-max-solid-one-px);
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: $hover-transition;
+
+            i {
+                margin-right: 5px;
+            }
+
+            &.light {
+                &:before {
+                    content: var(--theme-switch-light-svg);
+                    margin-right: 5px;
+                    position: relative;
+                    top: 3px;
+                }
+            }
+
+            &.active,
+            &:hover {
+                transition: $hover-transition;
+                outline: none;
+                border-color: var(--primary-color);
+                box-shadow: 0 0 12px var(--primary-color);
             }
         }
     }

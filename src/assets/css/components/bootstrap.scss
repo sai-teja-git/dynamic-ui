@@ -1,0 +1,36 @@
+.offcanvas {
+    .offcanvas-header {
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .options {
+            display: flex;
+            align-items: center;
+
+            .option-item {
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+
+                &.close {
+                    font-size: 18px;
+                    transition: .3s ease all;
+
+                    i {
+                        cursor: pointer;
+                        transition: .3s ease all;
+
+                        &:hover {
+                            transition: .3s ease all;
+                            font-size: 20px;
+                            color: #de5151;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

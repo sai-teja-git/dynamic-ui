@@ -6,12 +6,12 @@ function UserPages() {
 
     return (
         <>
-            <Header />
-            {/* <div className="side-menu">
-                    <Menus />
-                </div> */}
-            <div className="page">
-                <Outlet />
+            <div className="page-wrapper">
+                <Menus />
+                <Header />
+                <div className="page">
+                    <Outlet />
+                </div>
             </div>
         </>
     )

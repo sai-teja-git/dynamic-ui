@@ -1,15 +1,26 @@
 [app-data-theme="dark"] {
+    --primary-color: #bb39fe;
+    --app-page-background: #212529;
 
     --header-border: #545454;
+    --menu-active-background: #56565680;
 
     --page-background: #121212;
     --color: #fff;
 
-    --primary-active-color: #49227f;
-    --primary-hover-color: #381a62;
+    // --primary-active-color: #49227f;
+    // --primary-hover-color: #381a62;
 
     --text-active-color: #fff;
     --text-hover-color: #c8c8c8;
 
-    --border-white-initial: #a1a1a1;
+    --border-max-solid-one-px: 1px solid #a1a1a1;
+    --border-mid-solid-one-px: 1px solid #6b6b6b;
+    --border-low-solid-one-px: 1px solid #484848;
+    --border-last-solid-one-px: 1px solid #343434;
+
+    --logout-init: #f6a8a8;
+    --logout-hover: #fa5151;
+
+    --theme-switch-light-svg: url(/src/assets/svg/sun-white.svg)
 }

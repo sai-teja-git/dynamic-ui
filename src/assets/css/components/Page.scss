@@ -1,16 +1,27 @@
-// .app-body {
-//     background: var(--page-background);
-//     color: var(--color);
-// }
+.app-body {
+    color: var(--color) !important;
+}
 
 .page {
     padding: 16px;
-    height: calc(100vh - 60px);
+    height: calc(100vh - $header-height);
+    margin-left: $menu-closed-width;
+    transition: .3s;
 
     &-head {
         margin-bottom: 16px;
     }
 }
+
+.page-wrapper {
+    &.menu-open {
+        .page {
+            margin-left: $menu-width;
+            transition: .3s;
+        }
+    }
+}
+
 
 .page-not-found {
     height: 100vh;

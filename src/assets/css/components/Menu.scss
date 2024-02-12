@@ -1,33 +1,73 @@
-.menus-list {
-    display: flex;
-    align-items: center;
+.menu-list {
+    height: 100%;
+    transition: .3s;
+    padding: 10px 0px;
+    width: $menu-closed-width;
+    box-shadow: 8px 0px 9px 0px #00000014;
+    background: var(--app-page-background);
+    height: calc(100vh - $header-height);
+    position: fixed;
+    margin-top: $header-height;
 
-    .menu-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        cursor: pointer;
-        border: 1px solid #a1a1a1;
-        color: #a1a1a1;
-        padding: 10px;
-        transition: .3s ease all;
+    .menu-content {
+        padding-left: 0px;
 
-        &:hover {
-            background: var(--primary-hover-color);
-            border: 1px solid var(--primary-hover-color);
-            transition: .3s ease all;
+        li {
+            list-style: none;
+            transition: .3s;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+
+                .menu-icon {
+                    margin-right: 10px;
+                }
+
+                .menu-name {
+                    display: none;
+                    white-space: nowrap;
+                }
+            }
+
+            &:hover,
+            &.active {
+                background: var(--menu-active-background);
+            }
         }
+    }
 
-        &.active {
-            background: var(--primary-active-color);
-            border: 1px solid var(--primary-active-color);
-            color: #dbdbdb;
-            transition: .3s ease all;
+    &:hover {
+        width: $menu-width;
+
+        li {
+            a {
+                .menu-name {
+                    transition: .3s;
+                    display: block;
+                }
+            }
         }
+    }
+}
 
-        &:not(:last-child) {
-            margin-right: 10px;
+.page-wrapper {
+    &.menu-open {
+        .menu-list {
+            width: $menu-width;
+
+            li {
+                a {
+                    .menu-name {
+                        display: block;
+                    }
+                }
+            }
         }
     }
 }

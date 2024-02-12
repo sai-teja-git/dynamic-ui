@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import './Global.scss'
-import "jquery/dist/jquery.js"
-import "bootstrap/dist/js/bootstrap.bundle.js"
+import './Global.scss';
+import "jquery/dist/jquery.min.js";
 import "bootstrap/dist/css/bootstrap.css"
+// import "bootstrap/dist/js/bootstrap.min.js";
+import "bootstrap/dist/js/bootstrap.bundle.min.js"
 import "@fortawesome/fontawesome-free/css/all.min.css"
 import { Toaster } from 'react-hot-toast'
 import { BrowserRouter } from 'react-router-dom'

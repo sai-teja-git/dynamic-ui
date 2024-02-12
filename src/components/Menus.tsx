@@ -6,23 +6,26 @@ export default function Menus() {
     const navigate = useNavigate();
     const location = useLocation();
 
-    let [current_path, setCurrentPath] = useState("");
+    const [current_path, setCurrentPath] = useState("");
 
     const menu_list = [
         {
             name: "Form Builder",
             path: "/pages/form-constructor",
-            key: "form_builder"
+            key: "form_builder",
+            icon: "fa-solid fa-file-pen"
         },
         {
             name: "Form View",
             path: "/pages/form-view",
-            key: "form_view"
+            key: "form_view",
+            icon: "fa-solid fa-folder-tree"
         },
         {
             name: "DND Test",
             path: "/pages/dnd-test",
-            key: "dnd_test"
+            key: "dnd_test",
+            icon: "fa-solid fa-clone"
         },
     ]
 
@@ -47,12 +50,21 @@ export default function Menus() {
 
     return (
         <>
-            <div className="menus-list">
-                {menu_list.map((menu) => (
-                    <div key={menu.key} className={`menu-item ${(current_path === menu.path ? 'active' : '')}`} onClick={() => redirectTo(menu)}>
-                        {menu.name}
-                    </div>
-                ))}
+            <div className="menu-list">
+                <ul className="menu-content">
+                    {menu_list.map((menu) => (
+                        <li className={`${(current_path === menu.path && 'active')}`} onClick={() => redirectTo(menu)} key={menu.path}>
+                            <a>
+                                <div className="menu-icon">
+                                    <i className={menu.icon}></i>
+                                </div>
+                                <div className="menu-name">
+                                    {menu.name}
+                                </div>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
             </div>
         </>
     )

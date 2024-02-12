@@ -15,22 +15,23 @@ export default function FormConstructor() {
         { name: "Dropdown", type: "dropdown" },
     ]
 
-    const [selected_fields, setSelectedField] = useState<any[]>([])
+    let [selected_fields, setSelectedField] = useState<any[]>([])
 
     function addFieldToList(e: DragEndEvent) {
         console.log("heree", e)
         const newItem = e.active.data.current?.data;
         if (e.over?.id !== "field-droppable" || !newItem) return;
-        const temp = [...selected_fields];
-        temp.push(newItem);
-        setSelectedField(temp);
+        selected_fields.push(newItem)
+        setSelectedField(selected_fields);
     };
 
     // const modalRef = useRef()
 
-    function openModal() {
-        console.log("clicked")
+    function openModal(id: string) {
         $("#exampleModal").modal("show")
+        // $("#exampleModal").addClass("show")
+        // document.getElementById(id)?.setAttribute("aria-hidden", "false")
+        // $("#exampleModal").show()
     }
 
     function openCanvas() {
@@ -70,7 +71,10 @@ export default function FormConstructor() {
                 </ul>
             </div> */}
 
-            <button type="button" className="btn btn-primary mt-3" onClick={openModal}>
+            {/* <button type="button" className="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+            </button> */}
+            <button type="button" className="btn btn-primary mt-3" onClick={() => openModal("exampleModalLabel")}>
                 Launch demo modal
             </button>
 
@@ -96,7 +100,7 @@ export default function FormConstructor() {
                 Button with data-bs-target
             </button> */}
 
-            <div className="offcanvas offcanvas-start" tabIndex={-1} id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div className="offcanvas offcanvas-start" tabIndex={-1} key="offcanvasExample" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
                     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
