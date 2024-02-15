@@ -69,35 +69,52 @@
     }
 }
 
-.profile-card {
+.profile-data {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 18px;
 
-    .profile-data {
-        .profile-image {
-            $image-size: 8rem;
-            overflow: hidden;
-            height: $image-size;
-            width: $image-size;
-            display: inline-block;
-            vertical-align: middle;
-            border-radius: 50%;
-            border: 1px solid var(--header-border);
+    .profile-image {
+        $image-size: 8rem;
+        overflow: hidden;
+        height: $image-size;
+        width: $image-size;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 50%;
+        border: 1px solid var(--header-border);
 
-            img {
-                height: 100%;
-                width: 100%;
-                cursor: pointer;
-            }
+        img {
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
         }
+    }
 
-        .profile-details {
-            text-align: center;
-            margin: 16px 0px;
+    .profile-details {
+        text-align: center;
 
-            .full-name {
-                font-size: 30px;
-            }
+        .full-name {
+            font-size: 30px;
+        }
+    }
+
+    .edit {
+        margin-top: 10px;
+        border: var(--border-max-solid-one-px);
+        padding: 5px 10px;
+        border-radius: 8px;
+        font-size: 12px;
+        cursor: pointer;
+        transition: .3s ease all;
+
+        &:hover {
+            transition: .3s ease all;
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--color);
         }
     }
 }

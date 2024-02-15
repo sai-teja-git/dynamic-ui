@@ -5,7 +5,7 @@ import { SortableContext, verticalListSortingStrategy } from "@dnd-kit/sortable"
 import FieldDraggable from "./FieldDraggable";
 import FieldDropped from "./FieldDropped";
 import { v4 as uuidv4 } from "uuid";
-
+// import bootstrap from "bootstrap";
 
 export default function FormConstructor() {
 
@@ -28,6 +28,9 @@ export default function FormConstructor() {
     // const modalRef = useRef()
 
     function openModal(id: string) {
+        // const myModal = new bootstrap.Modal("#exampleModal", options)
+        // or
+        // const myModalAlternative = new bootstrap.Modal('#myModal').show()
         $("#exampleModal").modal("show")
         // $("#exampleModal").addClass("show")
         // document.getElementById(id)?.setAttribute("aria-hidden", "false")

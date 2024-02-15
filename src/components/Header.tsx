@@ -105,15 +105,18 @@ export default function Header() {
                     </div>
                 </div>
                 <div className="offcanvas-body p-0">
-                    <div className="profile-card">
-                        <div className="profile-data">
-                            <div className="profile-image">
-                                <img src="/src/assets/images/profile/default-profile-image.png" alt="logo" />
+                    <div className="profile-data">
+                        <div className="profile-image">
+                            <img src="/src/assets/images/profile/default-profile-image.png" alt="logo" />
+                        </div>
+                        <div className="profile-details">
+                            <div className="full-name">
+                                Full Name
                             </div>
-                            <div className="profile-details">
-                                <div className="full-name">Full Name</div>
-                                <div className="user-name">user_name</div>
-                            </div>
+                            <div className="user-name">user_name</div>
+                        </div>
+                        <div className="edit">
+                            Edit
                         </div>
                     </div>
                     <div className="theme-action">
