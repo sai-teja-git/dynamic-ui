@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import $ from "jquery";
 import { DndContext, DragEndEvent } from "@dnd-kit/core";
 import { SortableContext, verticalListSortingStrategy } from "@dnd-kit/sortable";
 import FieldDraggable from "./FieldDraggable";
@@ -23,9 +22,8 @@ export default function FormConstructor() {
         if (e.over?.id !== "field-droppable" || !newItem) return;
         selected_fields.push(newItem)
         setSelectedField(selected_fields);
+        openModal('');
     };
-
-    // const modalRef = useRef()
 
     function openModal(id: string) {
         // const myModal = new bootstrap.Modal("#exampleModal", options)
