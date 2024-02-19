@@ -1,5 +1,5 @@
-import Dropdown from "./dropdown"
-import Multiselect from "./multiselect"
+import Dropdown from "./Dropdown";
+import Multiselect from "./Multiselect";
 
 
 export {

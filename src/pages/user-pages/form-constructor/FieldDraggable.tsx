@@ -5,7 +5,7 @@ export default function FieldDraggable(props: { field: any }) {
 
 
     const { attributes, listeners, setNodeRef, transform } = useDraggable({
-        id: props.field.type,
+        id: props.field.id,
         data: { data: props.field }
     })
 
